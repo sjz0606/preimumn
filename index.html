@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Exclusive Premium — to'y va bazmlar uchun kostyumlar, Urganch</title>
+<meta name="description" content="Exclusive Premium: Urganchdagi erkaklar kiyimi butigi. Kuyov va kuyov jo'ra obrazlari, kostyum-shim, ko'ylak, galstuk va poyabzal. Pahlavon Mahmud 221, tel: 77 627 70 17.">
+<meta name="theme-color" content="#060504">
+<meta property="og:title" content="Exclusive Premium — Urganch">
+<meta property="og:description" content="To'y va bazmlar uchun looklar. Har bir tikuvda mukammallik, har bir ko'rinishda ishonch.">
+<meta property="og:image" content="assets/og.jpg">
+<link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@400;500;600&display=swap&subset=cyrillic,latin-ext" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<canvas id="gl" aria-hidden="true"></canvas>
+
+<header class="top">
+  <a class="top-mark" href="#kirish" aria-label="Exclusive Premium"><img src="assets/mark.svg" alt="" width="34" height="31"><span>Exclusive Premium</span></a>
+  <nav class="top-nav">
+    <a href="#obrazlar" data-t="navLooks"></a>
+    <a href="#detallar" data-t="navDetails"></a>
+    <a href="#manzil" data-t="navVisit"></a>
+  </nav>
+  <div class="top-right">
+    <button class="lang" id="lang" type="button" aria-label="Til / Язык">RU</button>
+    <a class="top-tel" href="tel:+998776277017">77 627 70 17</a>
+  </div>
+</header>
+
+<main>
+  <section id="kirish" class="stage" aria-label="Exclusive Premium">
+    <div class="stage-sticky">
+      <div class="hero" id="hero">
+        <h1 class="vh">Exclusive Premium</h1>
+        <p class="hero-line" data-t="heroLine"></p>
+        <p class="hero-hint"><span data-t="heroHint"></span><i></i></p>
+      </div>
+
+      <div class="look" id="look" aria-live="polite">
+        <p class="look-num"><b id="lookNum">01</b> / <span id="lookAll">10</span></p>
+        <h2 class="look-name" id="lookName"></h2>
+        <p class="look-note" id="lookNote"></p>
+        <button class="look-open" id="lookOpen" type="button"><span data-t="open"></span><i></i></button>
+      </div>
+      <ol class="ticks" id="ticks" aria-label="Obrazlar"></ol>
+    </div>
+    <span id="obrazlar" class="anchor"></span>
+  </section>
+
+  <!-- 3D ishlamasa ko'rinadigan oddiy ro'yxat -->
+  <section class="flat" id="flat" hidden></section>
+
+  <div class="after">
+    <section class="say">
+      <p class="say-kick" data-t="sayKick"></p>
+      <blockquote data-t="sayQuote"></blockquote>
+    </section>
+
+    <section class="details" id="detallar">
+      <header class="sec-head">
+        <p class="kick" data-t="detKick"></p>
+        <h2 data-t="detTitle"></h2>
+      </header>
+      <div class="det-grid" id="detGrid"></div>
+    </section>
+
+    <section class="kit">
+      <div class="kit-media"><video data-lazy="assets/d/kit.mp4" poster="assets/d/kit.webp" muted loop playsinline preload="none"></video></div>
+      <div class="kit-text">
+        <p class="kick" data-t="kitKick"></p>
+        <h2 data-t="kitTitle"></h2>
+        <ul class="kit-list" id="kitList"></ul>
+      </div>
+    </section>
+
+    <section class="visit" id="manzil">
+      <div class="visit-media"><video data-lazy="assets/d/store.mp4" poster="assets/d/store.webp" muted loop playsinline preload="none"></video></div>
+      <div class="visit-text">
+        <p class="kick" data-t="visKick"></p>
+        <h2 data-t="visTitle"></h2>
+        <address>
+          <span data-t="visAddr"></span>
+          <small data-t="visNear"></small>
+        </address>
+        <div class="acts">
+          <a class="act act-main" href="tel:+998776277017"><span data-t="call"></span><b>77 627 70 17</b></a>
+          <a class="act" href="https://yandex.uz/maps/?text=Urganch%2C%20Pahlavon%20Mahmud%20221" target="_blank" rel="noopener"><span data-t="route"></span></a>
+          <a class="act" href="https://www.instagram.com/exclusive_premium_boutique/" target="_blank" rel="noopener"><span>Instagram</span></a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="foot">
+      <img src="assets/mark.svg" alt="" width="44" height="40">
+      <p>Exclusive Premium · <span data-t="city"></span></p>
+    </footer>
+  </div>
+</main>
+
+<div class="dlg" id="dlg" role="dialog" aria-modal="true" aria-labelledby="dlgName" hidden>
+  <button class="dlg-x" id="dlgX" type="button" data-t-aria="close">×</button>
+  <div class="dlg-media"><video id="dlgVideo" muted loop playsinline></video></div>
+  <div class="dlg-text">
+    <p class="kick" id="dlgNum"></p>
+    <h2 id="dlgName"></h2>
+    <p id="dlgNote"></p>
+    <p class="dlg-how" data-t="dlgHow"></p>
+    <div class="acts">
+      <a class="act act-main" href="tel:+998776277017"><span data-t="call"></span><b>77 627 70 17</b></a>
+      <a class="act" id="dlgReel" target="_blank" rel="noopener"><span data-t="reel"></span></a>
+    </div>
+    <div class="dlg-nav">
+      <button id="dlgPrev" type="button" data-t="prev"></button>
+      <button id="dlgNext" type="button" data-t="next"></button>
+    </div>
+  </div>
+</div>
+
+<script type="module" src="js/site.js"></script>
+</body>
+</html>
